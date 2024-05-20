@@ -1,0 +1,24 @@
+@use "../abstracts/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: variables.$spacing-l;
+  padding-left: variables.$spacing-l;
+  padding-top: variables.$spacing-m;
+  padding-bottom: variables.$spacing-l;
+  gap: variables.$spacing-m;
+  background-color: variables.$backgroud-dark;
+  color: variables.$light-text-color;
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-s;
+    a {
+      color: variables.$light-text-color;
+      i {
+        margin-right: variables.$spacing-s;
+      }
+    }
+  }
+}

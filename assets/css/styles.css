@@ -29,6 +29,7 @@ h3 {
 h4 {
   font-family: "Shrikhand";
   font-size: 1.125rem;
+  font-weight: 400;
 }
 
 p {
@@ -74,4 +75,27 @@ header {
 }
 .header-location p {
   font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+  background-color: #353535;
+  color: white;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-links a {
+  color: white;
+}
+.footer-links a i {
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
