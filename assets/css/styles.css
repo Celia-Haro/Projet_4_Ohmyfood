@@ -1,1 +1,77 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-size: 1.875rem;
+  color: #101010;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Shrikhand";
+  font-size: 1.125rem;
+}
+
+p {
+  font-weight: 300;
+}
+
+img {
+  width: 90%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  height: 126px;
+  margin-bottom: 1.5rem;
+}
+
+.header-logo {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  z-index: 1;
+  position: relative;
+}
+
+.header-location {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  color: #353535;
+}
+.header-location i {
+  margin-right: 1rem;
+}
+.header-location p {
+  font-weight: 500;
+}/*# sourceMappingURL=styles.css.map */
