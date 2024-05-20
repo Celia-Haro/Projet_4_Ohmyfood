@@ -108,6 +108,37 @@ header {
   font-weight: 500;
 }
 
+.tutorial-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-left: 1rem;
+  padding: 1.5rem 1.5rem;
+  background-color: #f6f6f6;
+  border: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.tutorial-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 26px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  background-color: #9356dc;
+  color: #f6f6f6;
+  border-radius: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 .introduction {
   text-align: center;
   padding: 1.5rem 1.5rem 2.5rem;
@@ -120,4 +151,32 @@ header {
 .introduction p {
   color: #353535;
   margin-bottom: 2.5rem;
+}
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+.tutorial-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tutorial-step {
+  display: flex;
+  align-items: center;
+}
+.tutorial-content {
+  display: flex;
+  align-items: center;
+}
+
+.tutorial-content .tutorial-icon {
+  margin-left: 1rem;
+  color: #7e7e7e;
+}
+.tutorial-content .tutorial-icon-purple {
+  margin-left: 1rem;
+  color: #9356dc;
 }/*# sourceMappingURL=styles.css.map */

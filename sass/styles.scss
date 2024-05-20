@@ -4,7 +4,7 @@
 @use "./base/general";
 @use "./layout/header";
 @use "./layout/footer";
-@use "./components/buttons";
+@use "./components/buttons-cards";
 
 // Introduction
 
@@ -22,5 +22,43 @@
   }
   .button-primary {
     @extend %button-primary;
+  }
+}
+
+// Tutorial
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  padding: variables.$spacing-xl variables.$spacing-l;
+  gap: variables.$spacing-xl;
+  &-steps {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-m;
+  }
+  &-step {
+    display: flex;
+    align-items: center;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tutorial-number {
+  @extend %tutorial-number;
+}
+
+.tutorial-content {
+  @extend %btn-tuto;
+  .tutorial-icon {
+    margin-left: variables.$spacing-m;
+    color: variables.$icon-color;
+    &-purple {
+      margin-left: variables.$spacing-m;
+      color: variables.$primary-color;
+    }
   }
 }
