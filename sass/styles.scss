@@ -1,1 +1,4 @@
+// Imports de fichiers partials, utiliser en écrivant /ex color: variables.$primary-color !! Sinon ça ne fonctionnera pas ou mal
+
 @use "./abstracts/variables";
+@use "./base/general" as *;

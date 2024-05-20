@@ -1,0 +1,42 @@
+@use "./abstracts/variables";
+
+//  Reset / General
+
+* {
+  font-family: variables.$base-font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: variables.$logo-font-family;
+  //   font-weight: 400;
+  font-size: variables.$font-size-h1;
+  color: #101010;
+}
+
+h2 {
+  font-size: variables.$font-size-xxl;
+  font-weight: variables.$font-weight-l;
+}
+
+h3 {
+  font-size: variables.$font-size-xl;
+  font-weight: variables.$font-weight-l;
+}
+
+h4 {
+  font-family: variables.$logo-font-family;
+  font-size: variables.$font-size-xl;
+}
+
+p {
+  font-size: variables.$font-size-xl;
+  font-weight: vairables.$font-weight-s;
+  // font-weight: 400;
+}
