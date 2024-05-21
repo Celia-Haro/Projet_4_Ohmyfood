@@ -1,0 +1,70 @@
+@use "../abstracts/variables";
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: variables.$spacing-xl variables.$spacing-l;
+  gap: variables.$spacing-l;
+  background-color: variables.$background-main;
+  width: 100%;
+  .restaurant-cards {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-m;
+  }
+}
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 251px;
+  border-radius: variables.$border-radius-small;
+  box-shadow: variables.$box-shadow-5;
+  background-color: variables.$background-light;
+}
+
+.card-header {
+  position: relative;
+  overflow: hidden;
+  height: 70%;
+  img {
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-status {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 15px;
+    padding: 7px 12px;
+    color: variables.$green-text-color;
+    background-color: variables.$tertiary-color;
+    border: none;
+    border-radius: 2px;
+    box-shadow: variables.$box-shadow-1;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-m;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 variables.$spacing-l 0 variables.$spacing-m;
+  height: 30%;
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-xs;
+    p {
+      font-size: variables.$font-weight-l;
+    }
+  }
+  .card-favorite i {
+    font-size: 22px;
+  }
+}
