@@ -241,4 +241,14 @@ header {
 .tutorial-content .tutorial-icon-purple {
   margin-left: 1rem;
   color: #9356dc;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container {
+  padding: 1rem;
 }/*# sourceMappingURL=styles.css.map */

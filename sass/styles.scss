@@ -63,3 +63,13 @@
     }
   }
 }
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container {
+  padding: variables.$spacing-m;
+}
