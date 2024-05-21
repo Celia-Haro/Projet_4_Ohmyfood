@@ -3,7 +3,7 @@
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: variables.$spacing-xl variables.$spacing-l;
+  padding: variables.$spacing-section variables.$spacing-l;
   gap: variables.$spacing-l;
   background-color: variables.$background-main;
   width: 100%;
