@@ -76,7 +76,6 @@ header {
   align-items: center;
   justify-content: center;
   margin: auto;
-  z-index: 1;
 }
 .menu-header .header-logo {
   box-shadow: none;
@@ -87,6 +86,7 @@ header {
   position: absolute;
   left: 20px;
   color: #353535;
+  z-index: 10;
 }
 
 .header-picture {

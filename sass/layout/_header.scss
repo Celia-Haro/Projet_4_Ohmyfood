@@ -44,7 +44,6 @@ header {
   align-items: center;
   justify-content: center;
   margin: auto;
-  z-index: 1;
   .header-logo {
     box-shadow: none;
   }
@@ -55,6 +54,7 @@ header {
   position: absolute;
   left: 20px;
   color: variables.$secondary-text-color;
+  z-index: 10;
 }
 
 .header-picture {
