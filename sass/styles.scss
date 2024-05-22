@@ -72,18 +72,55 @@
   padding: variables.$spacing-m;
   background: white;
   border-radius: 40px;
-  // background-color: variables.$background-light;
-  // margin-top: 200px;
-  // z-index: 1;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // text-align: center;
-  // border-top-left-radius: variables.$border-radius-large;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variables.$spacing-l variables.$spacing-m;
+  h2 {
+    font-family: variables.$logo-font-family;
+    font-size: 28px;
+    font-weight: variables.$font-weight-logo;
+    color: #101010;
+  }
+  i {
+    font-size: 20px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-m;
+  h2 {
+    font-size: variables.$font-size-m;
+    font-weight: variables.$font-weight-s;
+  }
 }
 
 .menu-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding: variables.$spacing-m variables.$spacing-m;
+  border-radius: variables.$border-radius-small;
+  box-shadow: variables.$box-shadow-5;
+  .menu-name {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-s;
+  }
+  h3 {
+    font-weight: variables.$font-weight-m;
+  }
+  p {
+    font-size: variables.$font-size-xs;
+  }
+  .menu-price {
+    font-size: variables.$font-size-s;
+    font-weight: variables.$font-weight-m;
+    color: variables.$secondary-text-color;
+  }
 }
