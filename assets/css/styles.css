@@ -68,6 +68,39 @@ header {
   font-weight: 500;
 }
 
+.menu-header {
+  height: 63px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  z-index: 1;
+}
+.menu-header .header-logo {
+  box-shadow: none;
+}
+
+.menu-header a {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 20px;
+  color: #353535;
+}
+
+.header-picture {
+  position: relative;
+  top: 63px;
+}
+
+.header-picture img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -243,12 +276,16 @@ header {
   color: #9356dc;
 }
 
+.menu-container {
+  position: relative;
+  margin: 175px auto 3.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 40px;
+}
+
 .menu-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
-
-.container {
-  padding: 1rem;
 }/*# sourceMappingURL=styles.css.map */
