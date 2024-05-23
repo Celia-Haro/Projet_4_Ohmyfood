@@ -123,7 +123,7 @@ header {
   margin-right: 0.5rem;
 }
 
-.introduction .button-primary {
+.introduction .button-primary, .button-container a {
   color: white;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   border: none;
@@ -304,10 +304,23 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 .menu h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
   font-size: 1rem;
   font-weight: 300;
+}
+.menu h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
 }
 
 .menu-card {
@@ -333,4 +346,14 @@ header {
   font-size: 0.938rem;
   font-weight: 500;
   color: #353535;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.button-container a {
+  display: inline-block;
+  padding: 1rem 2rem;
 }/*# sourceMappingURL=styles.css.map */

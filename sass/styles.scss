@@ -94,9 +94,22 @@
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-m;
+  margin-bottom: variables.$spacing-xl;
   h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
     font-size: variables.$font-size-m;
     font-weight: variables.$font-weight-s;
+  }
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 3px;
+    background-color: variables.$tertiary-color;
   }
 }
 
@@ -122,5 +135,16 @@
     font-size: variables.$font-size-s;
     font-weight: variables.$font-weight-m;
     color: variables.$secondary-text-color;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: variables.$spacing-xxl;
+  a {
+    display: inline-block;
+    @extend %button-primary;
+    padding: variables.$spacing-m variables.$spacing-xl;
   }
 }
