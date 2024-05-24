@@ -68,17 +68,17 @@
 
 .menu-container {
   position: relative;
-  margin: 175px auto variables.$spacing-section;
+  margin-top: 175px;
   padding: variables.$spacing-m;
-  background: white;
-  border-radius: 40px;
+  background: variables.$background-main;
+  border-radius: 40px 40px 0 0;
 }
 
 .main-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: variables.$spacing-l variables.$spacing-m;
+  padding: variables.$spacing-m variables.$spacing-m variables.$spacing-l;
   h2 {
     font-family: variables.$logo-font-family;
     font-size: 28px;
@@ -141,7 +141,8 @@
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: variables.$spacing-xxl;
+  margin-top: variables.$spacing-section;
+  margin-bottom: variables.$spacing-section;
   a {
     display: inline-block;
     @extend %button-primary;
