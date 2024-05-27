@@ -163,7 +163,6 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 26px;
   z-index: 1;
   width: 24px;
   height: 24px;
@@ -186,6 +185,26 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  .restaurants .restaurant-cards {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants .restaurant-cards {
+    gap: 2rem;
+  }
+}
+.restaurants .restaurant-cards a {
+  max-width: 490px;
+}
+@media (min-width: 768px) {
+  .restaurants .restaurant-cards a {
+    width: 47%;
+  }
 }
 
 .restaurant-card {
@@ -266,11 +285,23 @@ header {
 .tutorial-steps {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .tutorial-steps {
+    flex-flow: row wrap;
+  }
 }
 .tutorial-step {
   display: flex;
+  position: relative;
   align-items: center;
+  max-width: 335px;
+}
+@media (min-width: 768px) {
+  .tutorial-step {
+    width: 335px;
+  }
 }
 .tutorial-content {
   display: flex;

@@ -36,12 +36,21 @@
   gap: variables.$spacing-xl;
   &-steps {
     display: flex;
+
     flex-direction: column;
-    gap: variables.$spacing-m;
+    gap: variables.$spacing-l;
+    @include mixins.medium-screen {
+      flex-flow: row wrap;
+    }
   }
   &-step {
     display: flex;
+    position: relative;
     align-items: center;
+    max-width: 335px;
+    @include mixins.medium-screen {
+      width: 335px;
+    }
   }
   &-content {
     display: flex;
