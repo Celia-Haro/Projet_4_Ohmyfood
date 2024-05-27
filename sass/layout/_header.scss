@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 header {
   height: 126px;
@@ -13,6 +14,9 @@ header {
   box-shadow: variables.$box-shadow-1;
   z-index: 2;
   position: relative;
+  @include mixins.medium-screen {
+    box-shadow: none;
+  }
 }
 
 .header-location {
@@ -33,6 +37,9 @@ header {
   p {
     font-size: variables.$font-size-s;
     font-weight: variables.$font-weight-m;
+  }
+  @include mixins.medium-screen {
+    box-shadow: none;
   }
 }
 
