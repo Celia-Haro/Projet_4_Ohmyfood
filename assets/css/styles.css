@@ -32,6 +32,15 @@ h4 {
   font-weight: 400;
 }
 
+.section-title {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.section-title h2 {
+  text-align: left;
+}
+
 header {
   height: 126px;
 }
@@ -121,10 +130,31 @@ header {
   background-color: #353535;
   color: white;
 }
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    box-sizing: border-box;
+    height: 114px;
+    padding-top: 2.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    gap: 3.5rem;
+  }
+}
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .footer-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 .footer-links a {
   color: white;
@@ -177,29 +207,33 @@ header {
   display: flex;
   flex-direction: column;
   padding: 3.5rem 1.5rem;
-  gap: 1.5rem;
+  gap: 2rem;
   background-color: #f6f6f6;
   width: 100%;
 }
 .restaurants .restaurant-cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  max-width: 1080px;
 }
 @media (min-width: 768px) {
   .restaurants .restaurant-cards {
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
   .restaurants .restaurant-cards {
     gap: 2rem;
+    margin: auto;
   }
 }
 .restaurants .restaurant-cards a {
   max-width: 490px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .restaurants .restaurant-cards a {
@@ -285,11 +319,19 @@ header {
 .tutorial-steps {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 1080px;
   gap: 1.5rem;
 }
 @media (min-width: 768px) {
   .tutorial-steps {
     flex-flow: row wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .tutorial-steps {
+    margin: auto;
   }
 }
 .tutorial-step {
