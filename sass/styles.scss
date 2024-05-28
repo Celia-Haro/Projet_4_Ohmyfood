@@ -87,6 +87,10 @@
   padding: variables.$spacing-m;
   background: variables.$background-main;
   border-radius: 40px 40px 0 0;
+  @include mixins.medium-screen {
+    max-width: 1055px;
+    margin: 275px auto 0;
+  }
 }
 
 .main-title {
@@ -94,6 +98,10 @@
   justify-content: space-between;
   align-items: center;
   padding: variables.$spacing-m variables.$spacing-m variables.$spacing-l;
+  @include mixins.medium-screen {
+    justify-content: center;
+    gap: variables.$spacing-l;
+  }
   h2 {
     font-family: variables.$logo-font-family;
     font-size: 28px;
@@ -110,6 +118,10 @@
   flex-direction: column;
   gap: variables.$spacing-m;
   margin-bottom: variables.$spacing-xl;
+  @include mixins.medium-screen {
+    max-width: 634px;
+    margin: auto;
+  }
   h2 {
     position: relative;
     display: inline-block;
@@ -151,6 +163,11 @@
     font-weight: variables.$font-weight-m;
     color: variables.$secondary-text-color;
   }
+}
+
+section:nth-of-type(2),
+section:nth-of-type(3) {
+  margin-top: variables.$spacing-l;
 }
 
 .button-container {
