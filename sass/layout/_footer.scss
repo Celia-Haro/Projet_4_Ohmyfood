@@ -4,9 +4,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding-left: variables.$spacing-l;
-  padding-top: variables.$spacing-m;
-  padding-bottom: variables.$spacing-l;
+  padding: variables.$spacing-xl;
   gap: variables.$spacing-m;
   background-color: variables.$backgroud-dark;
   color: variables.$light-text-color;
@@ -30,9 +28,14 @@
       gap: variables.$spacing-m;
     }
     a {
+      display: flex;
+      align-items: center;
       color: variables.$light-text-color;
+      gap: variables.$spacing-s;
       i {
-        margin-right: variables.$spacing-s;
+        font-size: 12px;
+        height: 13px;
+        width: 11px;
       }
     }
   }

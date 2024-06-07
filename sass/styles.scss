@@ -12,18 +12,22 @@
 
 .introduction {
   text-align: center;
-  padding: variables.$spacing-l variables.$spacing-l variables.$spacing-section;
+  padding: 40px variables.$spacing-l 70px;
   background-color: variables.$background-main;
   h2 {
     padding: 0 variables.$spacing-l;
-    margin-bottom: variables.$spacing-m;
+    margin-bottom: variables.$spacing-l;
   }
   p {
     color: variables.$secondary-text-color;
-    margin-bottom: variables.$spacing-xxl;
+    margin-bottom: 40px;
   }
   .button-primary {
     @extend %button-primary;
+  }
+  a {
+    margin-top: variables.$spacing-l;
+    margin-bottom: 55px;
   }
 }
 
@@ -32,13 +36,13 @@
 .tutorial {
   display: flex;
   flex-direction: column;
-  padding: variables.$spacing-section variables.$spacing-l;
-  gap: variables.$spacing-xl;
+  padding: variables.$spacing-section variables.$spacing-l 65px;
+  gap: variables.$spacing-xxl;
   &-steps {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    // margin: auto;
     max-width: 1080px;
     gap: variables.$spacing-l;
     @include mixins.medium-screen {
@@ -83,13 +87,13 @@
 
 .menu-container {
   position: relative;
-  margin-top: 175px;
+  top: -5px;
   padding: variables.$spacing-m;
   background: variables.$background-main;
   border-radius: 40px 40px 0 0;
   @include mixins.medium-screen {
     max-width: 1055px;
-    margin: 275px auto 0;
+    margin: 0 auto;
   }
 }
 
@@ -97,7 +101,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: variables.$spacing-m variables.$spacing-m variables.$spacing-l;
+  padding: variables.$spacing-m variables.$spacing-l variables.$spacing-xl;
+  padding-left: 0%;
   @include mixins.medium-screen {
     justify-content: center;
     gap: variables.$spacing-l;
@@ -116,8 +121,8 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: variables.$spacing-m;
-  margin-bottom: variables.$spacing-xl;
+  gap: variables.$spacing-s;
+  margin-bottom: 40px;
   @include mixins.medium-screen {
     max-width: 634px;
     margin: auto;
@@ -133,7 +138,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -8px;
     width: 40px;
     height: 3px;
     background-color: variables.$tertiary-color;
@@ -165,16 +170,15 @@
   }
 }
 
-section:nth-of-type(2),
 section:nth-of-type(3) {
-  margin-top: variables.$spacing-l;
+  margin-bottom: 0;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: variables.$spacing-section;
-  margin-bottom: variables.$spacing-section;
+  margin-top: variables.$spacing-xxl;
+  margin-bottom: variables.$spacing-m;
   a {
     display: inline-block;
     @extend %button-primary;
