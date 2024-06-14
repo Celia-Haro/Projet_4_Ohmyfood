@@ -36,17 +36,38 @@
     <main class="menu-container">
       <div class="main-title">
         <h2>La palette du goût</h2>
-        <i class="fa-regular fa-heart"></i>
+        <input type="checkbox" id="like-5" />
+        <label for="like-5">
+          <img class="heart" src="/assets/images/icon/heart.svg" alt="heart" />
+          <img
+            class="heart-activated"
+            src="/assets/images/icon/heart-active.svg"
+            alt="heart activated"
+          />
+        </label>
       </div>
       <section class="menu">
         <h2>ENTRÉES</h2>
-        <div class="menu-card">
-          <div class="menu-name">
-            <h3>Fricassée d'escargots</h3>
-            <p>Au piment d'Espelette</p>
+        <input type="checkbox" name="menu-checked" id="menu-checked-1" />
+        <label for="menu-checked-1">
+          <div class="menu-card">
+            <div class="menu-name">
+              <h3>Fricassée d'escargots</h3>
+              <p>Au piment d'Espelette</p>
+            </div>
+            <div class="right-side">
+              <div class="menu-price">25€</div>
+              <div class="anim-check">
+                <img
+                  class="menu-selected"
+                  src="/assets/images/icon/menu-selected.svg"
+                  alt="Selected icon"
+                />
+              </div>
+            </div>
           </div>
-          <div class="menu-price">25€</div>
-        </div>
+        </label>
+
         <div class="menu-card">
           <div class="menu-name">
             <h3>Foie gras de canard mi-cuit</h3>

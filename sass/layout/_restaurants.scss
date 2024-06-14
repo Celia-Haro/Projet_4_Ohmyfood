@@ -84,7 +84,12 @@
       font-size: variables.$font-size-l;
     }
   }
-  .card-favorite i {
-    font-size: 22px;
+  .card-favorite img {
+    width: 22px;
+    height: 21px;
+  }
+
+  .heart {
+    position: absolute;
   }
 }
