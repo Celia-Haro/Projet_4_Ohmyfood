@@ -27,27 +27,29 @@ input:checked ~ label .heart-activated {
   border-radius: 0 15px 15px 0;
   color: #99e2d0;
   background-color: #99e2d0;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in-out;
 }
 .menu-card .anim-check img {
   width: 0;
-  transition: all 200ms 200ms ease-out;
+  transition: all 200ms 100ms ease-out;
 }
 
 .menu-card:hover .anim-check {
   width: 20px;
+  transition: all 200ms ease-in;
 }
 .menu-card:hover .anim-check img {
   width: 0;
+  transition: all 200ms ease-in;
 }
 
 input:checked + label .menu-card .anim-check {
   width: 59px;
-  transition: width 400ms ease-in;
+  transition: width 300ms ease-in;
 }
 input:checked + label .menu-card .anim-check img {
   width: auto;
-  transition: width 200ms ease-out;
+  transition: width 200ms 100ms ease-out;
 }
 
 input:checked + label:hover .menu-card .anim-check {
@@ -527,16 +529,22 @@ h4 {
 .menu-card .menu-name {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  justify-content: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-right: 5px;
 }
 .menu-card h3 {
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card p {
   font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card .right-side {
   display: flex;

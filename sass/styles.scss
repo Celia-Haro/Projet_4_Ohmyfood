@@ -168,16 +168,22 @@
   .menu-name {
     display: flex;
     flex-direction: column;
-    gap: variables.$spacing-s;
+    gap: variables.$spacing-xs;
+    justify-content: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding-right: variables.$spacing-xs;
   }
   h3 {
     font-weight: variables.$font-weight-m;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   p {
     font-size: variables.$font-size-xs;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .right-side {
     display: flex;
