@@ -44,6 +44,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 1080px;
+    width: 100%;
     gap: variables.$spacing-l;
     @include mixins.medium-screen {
       flex-flow: row nowrap;
@@ -57,7 +58,7 @@
     display: flex;
     position: relative;
     align-items: center;
-    width: 89%;
+
     min-width: 335px;
     @include mixins.medium-screen {
       width: 30%;

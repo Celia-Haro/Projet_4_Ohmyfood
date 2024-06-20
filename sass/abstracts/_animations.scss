@@ -23,13 +23,6 @@ input:checked ~ label {
 // Animation menu-card
 
 .menu-card {
-  .menu-price {
-    transform: translateX(59px);
-    transition: all 400ms ease-out;
-  }
-  & :hover {
-    transform: translateX(10);
-  }
   .anim-check {
     display: flex;
     justify-content: center;
@@ -37,30 +30,42 @@ input:checked ~ label {
     position: relative;
     bottom: -15px;
     right: -15px;
-    transform: translateX(59px);
     transform-origin: right;
-    opacity: 0;
-    width: 59px;
+    width: 0;
     height: 69px;
     border-radius: 0 15px 15px 0;
     color: variables.$tertiary-color;
     background-color: variables.$tertiary-color;
-    transition: transform 400ms ease-in, opacity 200ms ease-out;
-    & :hover {
-      transform: translateX(40);
-      opacity: 0.5;
+    transition: all 300ms ease-in;
+    img {
+      width: 0;
+      transition: all 200ms 200ms ease-out;
     }
   }
 }
 
-input:checked ~ label {
-  .menu-price {
-    transform: translateX(0);
-    transition: all 200ms ease-out;
-  }
+.menu-card:hover {
   .anim-check {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 200ms ease-in, opacity 0s 190ms ease-out;
+    width: 20px;
+    img {
+      width: 0;
+    }
+  }
+}
+
+input:checked + label .menu-card .anim-check {
+  width: 59px;
+  transition: width 400ms ease-in;
+  img {
+    width: auto;
+    transition: width 200ms ease-out;
+  }
+}
+
+input:checked + label:hover .menu-card .anim-check {
+  width: 59px;
+  transition: all 400mx ease-in;
+  img {
+    width: auto;
   }
 }
