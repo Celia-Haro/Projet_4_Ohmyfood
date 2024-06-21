@@ -166,6 +166,7 @@
   padding: variables.$spacing-m variables.$spacing-m;
   border-radius: variables.$border-radius-small;
   box-shadow: variables.$box-shadow-5;
+  cursor: pointer;
   .menu-name {
     display: flex;
     flex-direction: column;
