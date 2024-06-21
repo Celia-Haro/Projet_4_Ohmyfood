@@ -68,6 +68,7 @@
   width: 100%;
   height: 275px;
   object-fit: cover;
+  object-position: 50% 65%;
   @include mixins.medium-screen {
     height: 383px;
   }
