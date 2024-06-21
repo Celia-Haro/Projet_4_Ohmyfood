@@ -20,7 +20,33 @@ input:checked ~ label {
   }
 }
 
-// Animation menu-card
+// Animation sections menu delay
+
+.menu-1 {
+animation : slideIn 1s forwards;
+}
+
+.menu-2 {
+  animation: slideIn 1s forwards 150ms;
+}
+
+.menu-3 {
+  animation: slideIn 1s forwards 300ms;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Animation menu-card checkbox
 
 .menu-card {
   .anim-check {
@@ -36,7 +62,7 @@ input:checked ~ label {
     border-radius: 0 15px 15px 0;
     color: variables.$tertiary-color;
     background-color: variables.$tertiary-color;
-    transition: all 200ms ease-in-out;
+    transition: all 150ms ease-in-out;
     img {
       width: 0;
       transition: all 200ms 100ms ease-out;
@@ -71,3 +97,5 @@ input:checked + label:hover .menu-card .anim-check {
     width: auto;
   }
 }
+
+

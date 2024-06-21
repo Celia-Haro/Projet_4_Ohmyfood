@@ -14,6 +14,28 @@ input:checked ~ label .heart-activated {
   opacity: 1;
 }
 
+.menu-1 {
+  animation: slideIn 1s forwards;
+}
+
+.menu-2 {
+  animation: slideIn 1s forwards 150ms;
+}
+
+.menu-3 {
+  animation: slideIn 1s forwards 300ms;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .menu-card .anim-check {
   display: flex;
   justify-content: center;
@@ -27,7 +49,7 @@ input:checked ~ label .heart-activated {
   border-radius: 0 15px 15px 0;
   color: #99e2d0;
   background-color: #99e2d0;
-  transition: all 200ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .menu-card .anim-check img {
   width: 0;
