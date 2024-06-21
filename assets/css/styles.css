@@ -3,14 +3,17 @@ input {
 }
 
 label .heart-activated {
+  cursor: pointer;
   opacity: 0;
   transition: all 800ms ease-out;
 }
 
 input:checked ~ label .heart {
+  cursor: pointer;
   opacity: 0;
 }
 input:checked ~ label .heart-activated {
+  cursor: pointer;
   opacity: 1;
 }
 
@@ -506,6 +509,7 @@ h4 {
   font-size: 20px;
 }
 .main-title .heart {
+  cursor: pointer;
   position: absolute;
 }
 

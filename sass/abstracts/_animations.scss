@@ -6,6 +6,7 @@ input {
 
 label {
   .heart-activated {
+    cursor: pointer;
     opacity: 0;
     transition: all 800ms ease-out;
   }
@@ -13,9 +14,11 @@ label {
 
 input:checked ~ label {
   .heart {
+    cursor: pointer;
     opacity: 0;
   }
   .heart-activated {
+    cursor: pointer;
     opacity: 1;
   }
 }
