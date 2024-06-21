@@ -1,5 +1,7 @@
 @use "./variables";
 
+// animation heart
+
 input {
   display: none;
 }
@@ -26,7 +28,7 @@ input:checked ~ label {
 // Animation sections menu delay
 
 .menu-1 {
-animation : slideIn 1s forwards;
+  animation : slideIn 1s forwards;
 }
 
 .menu-2 {
@@ -100,7 +102,4 @@ input:checked + label:hover .menu-card .anim-check {
     width: auto;
   }
 }
-
-
-// testttttttt
 
