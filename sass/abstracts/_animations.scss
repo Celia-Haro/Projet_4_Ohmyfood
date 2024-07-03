@@ -97,10 +97,6 @@
   }
 }
 
-.content {
-  animation: fadeIn 3s forwards;
-}
-
 // animation heart
 
 input {
@@ -197,7 +193,7 @@ input:checked + label .menu-card .anim-check {
 
 input:checked + label:hover .menu-card .anim-check {
   width: 59px;
-  transition: all 400mx ease-in;
+  transition: all 400ms ease-in;
   img {
     width: auto;
   }

@@ -8,29 +8,31 @@
   gap: variables.$spacing-xl;
   background-color: variables.$background-main;
   width: 100%;
+}
 
-  .restaurant-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: variables.$spacing-m;
-    max-width: 1080px;
-    @include mixins.medium-screen {
-      flex-flow: row wrap;
-      justify-content: space-between;
-      gap: variables.$spacing-l;
-    }
-    @include mixins.large-screen {
-      gap: variables.$spacing-xl;
-      margin: auto;
-    }
-    a {
-      max-width: 490px;
-      width: 100%;
-      @include mixins.medium-screen {
-        width: 47%;
-      }
-    }
+.restaurant-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$spacing-m;
+  max-width: 1080px;
+  @include mixins.medium-screen {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: variables.$spacing-l;
+  }
+  @include mixins.large-screen {
+    gap: variables.$spacing-xl;
+    margin: auto;
+  }
+}
+
+.card-container {
+  position: relative;
+  max-width: 490px;
+  width: 100%;
+  @include mixins.medium-screen {
+    width: 47%;
   }
 }
 
@@ -84,12 +86,36 @@
       font-size: variables.$font-size-l;
     }
   }
-  .card-favorite img {
-    width: 22px;
-    height: 21px;
-  }
+}
 
-  .heart {
-    position: absolute;
-  }
+.card-favorite {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.card-favorite input[type="checkbox"] {
+  display: none;
+}
+
+.card-favorite label {
+  cursor: pointer;
+}
+
+.heart,
+.heart-activated {
+  width: 22px;
+  height: 21px;
+}
+
+.heart-activated {
+  display: none;
+}
+
+.card-favorite input[type="checkbox"]:checked + label .heart {
+  display: none;
+}
+
+.card-favorite input[type="checkbox"]:checked + label .heart-activated {
+  display: inline-block;
 }

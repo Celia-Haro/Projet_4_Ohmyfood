@@ -99,10 +99,6 @@
     transform: scale(1);
   }
 }
-.content {
-  animation: fadeIn 3s forwards;
-}
-
 input {
   display: none;
 }
@@ -184,7 +180,7 @@ input:checked + label .menu-card .anim-check img {
 
 input:checked + label:hover .menu-card .anim-check {
   width: 59px;
-  transition: all 400mx ease-in;
+  transition: all 400ms ease-in;
 }
 input:checked + label:hover .menu-card .anim-check img {
   width: auto;
@@ -412,7 +408,8 @@ h4 {
   background-color: #f6f6f6;
   width: 100%;
 }
-.restaurants .restaurant-cards {
+
+.restaurant-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -420,24 +417,26 @@ h4 {
   max-width: 1080px;
 }
 @media (min-width: 768px) {
-  .restaurants .restaurant-cards {
+  .restaurant-cards {
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 20px;
   }
 }
 @media (min-width: 1024px) {
-  .restaurants .restaurant-cards {
+  .restaurant-cards {
     gap: 25px;
     margin: auto;
   }
 }
-.restaurants .restaurant-cards a {
+
+.card-container {
+  position: relative;
   max-width: 490px;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .restaurants .restaurant-cards a {
+  .card-container {
     width: 47%;
   }
 }
@@ -493,12 +492,37 @@ h4 {
 .card-content .card-info p {
   font-size: 1.063rem;
 }
-.card-content .card-favorite img {
+
+.card-favorite {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.card-favorite input[type=checkbox] {
+  display: none;
+}
+
+.card-favorite label {
+  cursor: pointer;
+}
+
+.heart,
+.heart-activated {
   width: 22px;
   height: 21px;
 }
-.card-content .heart {
-  position: absolute;
+
+.heart-activated {
+  display: none;
+}
+
+.card-favorite input[type=checkbox]:checked + label .heart {
+  display: none;
+}
+
+.card-favorite input[type=checkbox]:checked + label .heart-activated {
+  display: inline-block;
 }
 
 .introduction {
