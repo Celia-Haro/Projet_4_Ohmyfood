@@ -113,7 +113,7 @@
   padding-left: 0%;
   @include mixins.medium-screen {
     justify-content: center;
-    gap: variables.$spacing-l;
+    gap: variables.$spacing-xl;
   }
   h2 {
     font-family: variables.$logo-font-family;
@@ -121,12 +121,10 @@
     font-weight: variables.$font-weight-logo;
     color: #101010;
   }
-  img {
-    font-size: 20px;
-  }
-  .heart {
-    cursor: pointer;
-    position: absolute;
+  .card-favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

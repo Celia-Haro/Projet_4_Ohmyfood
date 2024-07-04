@@ -88,34 +88,8 @@
   }
 }
 
-.card-favorite {
+.card-container .card-favorite {
   position: absolute;
   bottom: 16px;
   right: 16px;
-}
-
-.card-favorite input[type="checkbox"] {
-  display: none;
-}
-
-.card-favorite label {
-  cursor: pointer;
-}
-
-.heart,
-.heart-activated {
-  width: 22px;
-  height: 21px;
-}
-
-.heart-activated {
-  display: none;
-}
-
-.card-favorite input[type="checkbox"]:checked + label .heart {
-  display: none;
-}
-
-.card-favorite input[type="checkbox"]:checked + label .heart-activated {
-  display: inline-block;
 }
