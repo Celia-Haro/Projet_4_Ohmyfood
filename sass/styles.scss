@@ -18,6 +18,9 @@
   h2 {
     padding: 0 variables.$spacing-l;
     margin-bottom: variables.$spacing-l;
+    @include mixins.medium-screen {
+      font-size: 40px;
+    }
   }
   p {
     color: variables.$secondary-text-color;
@@ -175,12 +178,14 @@
     white-space: nowrap;
     padding-right: variables.$spacing-xs;
   }
-  h3 {
+  h3,
+  .menu-title {
     font-weight: variables.$font-weight-m;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  p {
+  p,
+  .menu-subtitle {
     font-size: variables.$font-size-xs;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -149,7 +149,11 @@ input:checked ~ label {
 }
 
 // Animation sections menu delay
-
+.menu {
+  &__animation--1 {
+    animation: slideIn 1s forwards;
+  }
+}
 .menu-1 {
   animation: slideIn 1s forwards;
 }

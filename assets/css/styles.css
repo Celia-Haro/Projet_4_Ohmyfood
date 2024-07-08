@@ -144,6 +144,10 @@ input:checked ~ label .heart-activated {
   opacity: 1;
 }
 
+.menu__animation--1 {
+  animation: slideIn 1s forwards;
+}
+
 .menu-1 {
   animation: slideIn 1s forwards;
 }
@@ -534,6 +538,11 @@ h4 {
   padding: 0 20px;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .introduction h2 {
+    font-size: 40px;
+  }
+}
 .introduction p {
   color: #353535;
   margin-bottom: 40px;
@@ -689,12 +698,14 @@ h4 {
   white-space: nowrap;
   padding-right: 5px;
 }
-.menu-card h3 {
+.menu-card h3,
+.menu-card .menu-title {
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-card p {
+.menu-card p,
+.menu-card .menu-subtitle {
   font-size: 0.875rem;
   overflow: hidden;
   text-overflow: ellipsis;
