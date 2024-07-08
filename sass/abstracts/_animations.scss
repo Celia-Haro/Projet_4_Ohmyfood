@@ -1,21 +1,7 @@
 @use "./variables";
+@use "./mixins";
 
 // Animation LOADER
-
-.loader-container {
-  z-index: 99;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  width: 100%;
-  background-color: variables.$backgroud-dark;
-  animation: fadeOut 3s forwards;
-}
 
 @keyframes fadeOut {
   0% {
@@ -30,61 +16,6 @@
   }
 }
 
-.loader {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
-.dot {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: variables.$secondary-color;
-  border-radius: 50%;
-  animation: dot-spin 1.5s ease-in infinite;
-}
-
-.dot:nth-child(1) {
-  top: 0;
-  left: 50%;
-  animation-delay: 0s;
-}
-.dot:nth-child(2) {
-  top: 14.64%;
-  left: 85.36%;
-  animation-delay: 0.15s;
-}
-.dot:nth-child(3) {
-  top: 50%;
-  left: 100%;
-  animation-delay: 0.3s;
-}
-.dot:nth-child(4) {
-  top: 85.36%;
-  left: 85.36%;
-  animation-delay: 0.45s;
-}
-.dot:nth-child(5) {
-  top: 100%;
-  left: 50%;
-  animation-delay: 0.6s;
-}
-.dot:nth-child(6) {
-  top: 85.36%;
-  left: 14.64%;
-  animation-delay: 0.75s;
-}
-.dot:nth-child(7) {
-  top: 50%;
-  left: 0;
-  animation-delay: 0.9s;
-}
-.dot:nth-child(8) {
-  top: 14.64%;
-  left: 14.64%;
-  animation-delay: 1.05s;
-}
-
 @keyframes dot-spin {
   0% {
     transform: scale(0.5);
@@ -94,6 +25,72 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.loader {
+  @include mixins.flexbox(column, center, center);
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: variables.$backgroud-dark;
+  animation: fadeOut 3s forwards;
+  &__container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    &-dot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: variables.$secondary-color;
+      border-radius: 50%;
+      animation: dot-spin 1.5s ease-in infinite;
+      &:nth-child(1) {
+        top: 0;
+        left: 50%;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        top: 14.64%;
+        left: 85.36%;
+        animation-delay: 0.15s;
+      }
+      &:nth-child(3) {
+        top: 50%;
+        left: 100%;
+        animation-delay: 0.3s;
+      }
+      &:nth-child(4) {
+        top: 85.36%;
+        left: 85.36%;
+        animation-delay: 0.45s;
+      }
+      &:nth-child(5) {
+        top: 100%;
+        left: 50%;
+        animation-delay: 0.6s;
+      }
+      &:nth-child(6) {
+        top: 85.36%;
+        left: 14.64%;
+        animation-delay: 0.75s;
+      }
+      &:nth-child(7) {
+        top: 50%;
+        left: 0;
+        animation-delay: 0.9s;
+      }
+      &:nth-child(8) {
+        top: 14.64%;
+        left: 14.64%;
+        animation-delay: 1.05s;
+      }
+    }
   }
 }
 

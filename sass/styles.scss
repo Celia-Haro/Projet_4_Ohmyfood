@@ -183,10 +183,11 @@
     font-weight: variables.$font-weight-m;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: variables.$font-size-xl;
   }
   p,
   .menu-subtitle {
-    font-size: variables.$font-size-xs;
+    font-size: variables.$font-size-s;
     overflow: hidden;
     text-overflow: ellipsis;
   }
