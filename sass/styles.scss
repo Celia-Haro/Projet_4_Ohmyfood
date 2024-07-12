@@ -38,14 +38,11 @@
 // Tutorial
 
 .tutorial {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flexbox(column);
   padding: variables.$spacing-section variables.$spacing-l 65px;
   gap: variables.$spacing-xxl;
   &-steps {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include mixins.flexbox(column, center);
     max-width: 1080px;
     width: 100%;
     gap: variables.$spacing-l;
@@ -58,10 +55,8 @@
     }
   }
   &-step {
-    display: flex;
+    @include mixins.flexbox($direction, $justify, center);
     position: relative;
-    align-items: center;
-
     min-width: 335px;
     @include mixins.medium-screen {
       width: 30%;
@@ -71,25 +66,19 @@
     @include mixins.large-screen {
       width: 335px;
     }
-  }
-  &-content {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.tutorial-number {
-  @extend %tutorial-number;
-}
-
-.tutorial-content {
-  @extend %btn-tuto;
-  .tutorial-icon {
-    margin-left: variables.$spacing-m;
-    color: variables.$icon-color;
-    &-purple {
-      margin-left: variables.$spacing-m;
-      color: variables.$primary-color;
+    &-number {
+      @extend %tutorial-number;
+    }
+    &-content {
+      @extend %btn-tuto;
+      .tutorial-icon {
+        margin-left: variables.$spacing-m;
+        color: variables.$icon-color;
+        &-purple {
+          margin-left: variables.$spacing-m;
+          color: variables.$primary-color;
+        }
+      }
     }
   }
 }
