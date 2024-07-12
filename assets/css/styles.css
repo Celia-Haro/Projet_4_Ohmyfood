@@ -251,7 +251,7 @@ h4 {
   text-align: left;
 }
 
-.header__logo {
+.header__logo, .menu-header__logo {
   width: 100%;
   height: 63px;
   display: flex;
@@ -262,7 +262,7 @@ h4 {
   position: relative;
 }
 @media (min-width: 768px) {
-  .header__logo {
+  .header__logo, .menu-header__logo {
     box-shadow: none;
   }
 }
@@ -301,10 +301,6 @@ h4 {
   justify-content: center;
   margin: auto;
 }
-.menu-header .header--logo {
-  box-shadow: none;
-}
-
 .menu-header a {
   font-size: 1.5rem;
   position: absolute;
@@ -312,12 +308,13 @@ h4 {
   color: #353535;
   z-index: 10;
 }
-
+.menu-header__logo {
+  box-shadow: none;
+}
 .menu-header__picture {
   position: relative;
   top: 63px;
 }
-
 .menu-header__picture img {
   width: 100%;
   height: 275px;

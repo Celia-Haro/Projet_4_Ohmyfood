@@ -48,30 +48,28 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  // c/c les propriétés utiles de header__logo !! ne pas le faire apparaitre à cet endroit de mon code !!
-  .header--logo {
+  a {
+    font-size: variables.$font-size-xxl;
+    position: absolute;
+    left: 20px;
+    color: variables.$secondary-text-color;
+    z-index: 10;
+  }
+  &__logo {
+    @extend .header__logo;
     box-shadow: none;
   }
-}
-
-.menu-header a {
-  font-size: variables.$font-size-xxl;
-  position: absolute;
-  left: 20px;
-  color: variables.$secondary-text-color;
-  z-index: 10;
-}
-
-.menu-header__picture {
-  position: relative;
-  top: 63px;
-}
-.menu-header__picture img {
-  width: 100%;
-  height: 275px;
-  object-fit: cover;
-  object-position: 50% 65%;
-  @include mixins.medium-screen {
-    height: 383px;
+  &__picture {
+    position: relative;
+    top: 63px;
+    img {
+      width: 100%;
+      height: 275px;
+      object-fit: cover;
+      object-position: 50% 65%;
+      @include mixins.medium-screen {
+        height: 383px;
+      }
+    }
   }
 }
