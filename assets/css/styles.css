@@ -336,6 +336,9 @@ h4 {
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   padding: 25px;
   gap: 15px;
   background-color: #353535;
@@ -356,24 +359,24 @@ h4 {
     gap: 50px;
   }
 }
-.footer-links {
+.footer__links {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 @media (min-width: 768px) {
-  .footer-links {
+  .footer__links {
     flex-direction: row;
     gap: 15px;
   }
 }
-.footer-links a {
+.footer__links a {
   display: flex;
   align-items: center;
   color: white;
   gap: 10px;
 }
-.footer-links a i {
+.footer__links a i {
   font-size: 12px;
   height: 13px;
   width: 11px;

@@ -2,15 +2,13 @@
 @use "../abstracts/mixins";
 
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flexbox(column);
   padding: variables.$spacing-xl;
   gap: variables.$spacing-m;
   background-color: variables.$backgroud-dark;
   color: variables.$light-text-color;
   @include mixins.medium-screen {
-    flex-direction: row-reverse;
-    align-items: center;
+    @include mixins.flexbox(row-reverse, $justify, center);
     box-sizing: border-box;
     height: 114px;
     padding-top: variables.$spacing-xxl;
@@ -19,17 +17,15 @@
   @include mixins.large-screen {
     gap: variables.$spacing-section;
   }
-  &-links {
-    display: flex;
-    flex-direction: column;
+  &__links {
+    @include mixins.flexbox(column);
     gap: variables.$spacing-s;
     @include mixins.medium-screen {
-      flex-direction: row;
+      @include mixins.flexbox(row);
       gap: variables.$spacing-m;
     }
     a {
-      display: flex;
-      align-items: center;
+      @include mixins.flexbox($diretion, $justify, center);
       color: variables.$light-text-color;
       gap: variables.$spacing-s;
       i {
