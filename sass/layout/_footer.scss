@@ -8,7 +8,7 @@
   background-color: variables.$backgroud-dark;
   color: variables.$light-text-color;
   @include mixins.medium-screen {
-    @include mixins.flexbox(row-reverse, $justify, center);
+    @include mixins.flexbox(row-reverse, flex-start, center);
     box-sizing: border-box;
     height: 114px;
     padding-top: variables.$spacing-xxl;
@@ -25,7 +25,7 @@
       gap: variables.$spacing-m;
     }
     a {
-      @include mixins.flexbox($diretion, $justify, center);
+      @include mixins.flexbox(row, flex-start, center);
       color: variables.$light-text-color;
       gap: variables.$spacing-s;
       i {

@@ -41,7 +41,7 @@
   @include mixins.flexbox(column);
   padding: variables.$spacing-section variables.$spacing-l 65px;
   gap: variables.$spacing-xxl;
-  &-steps {
+  &__steps {
     @include mixins.flexbox(column, center);
     max-width: 1080px;
     width: 100%;
@@ -54,8 +54,8 @@
       margin: auto;
     }
   }
-  &-step {
-    @include mixins.flexbox($direction, $justify, center);
+  &__step {
+    @include mixins.flexbox(row, flex-start, center);
     position: relative;
     min-width: 335px;
     @include mixins.medium-screen {
@@ -71,13 +71,13 @@
     }
     &-content {
       @extend %btn-tuto;
-      .tutorial-icon {
-        margin-left: variables.$spacing-m;
-        color: variables.$icon-color;
-        &-purple {
-          margin-left: variables.$spacing-m;
-          color: variables.$primary-color;
-        }
+      @include mixins.flexbox(row, flex-start, center);
+    }
+    &-icon {
+      margin-left: variables.$spacing-m;
+      color: variables.$icon-color;
+      &--purple {
+        color: variables.$primary-color;
       }
     }
   }

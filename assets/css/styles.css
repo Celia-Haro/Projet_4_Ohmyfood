@@ -346,8 +346,11 @@ h4 {
 }
 @media (min-width: 768px) {
   .footer {
+    display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: nowrap;
     box-sizing: border-box;
     height: 114px;
     padding-top: 30px;
@@ -362,17 +365,27 @@ h4 {
 .footer__links {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   gap: 10px;
 }
 @media (min-width: 768px) {
   .footer__links {
+    display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
     gap: 15px;
   }
 }
 .footer__links a {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   color: white;
   gap: 10px;
 }
@@ -397,7 +410,7 @@ h4 {
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.5019607843);
 }
 
-.tutorial-content {
+.tutorial__step-content {
   display: flex;
   align-items: center;
   width: 100%;
@@ -412,7 +425,7 @@ h4 {
   font-weight: 500;
 }
 
-.tutorial-number {
+.tutorial__step-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -552,57 +565,66 @@ h4 {
 .tutorial {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   padding: 50px 20px 65px;
   gap: 30px;
 }
-.tutorial-steps {
+.tutorial__steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
   max-width: 1080px;
   width: 100%;
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .tutorial-steps {
+  .tutorial__steps {
     flex-flow: row nowrap;
     width: 100%;
   }
 }
 @media (min-width: 1024px) {
-  .tutorial-steps {
+  .tutorial__steps {
     margin: auto;
   }
 }
-.tutorial-step {
+.tutorial__step {
   display: flex;
-  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
   min-width: 335px;
 }
 @media (min-width: 768px) {
-  .tutorial-step {
+  .tutorial__step {
     width: 30%;
     min-width: 235px;
     max-width: 335px;
   }
 }
 @media (min-width: 1024px) {
-  .tutorial-step {
+  .tutorial__step {
     width: 335px;
   }
 }
-.tutorial-content {
+.tutorial__step-content {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
 }
-
-.tutorial-content .tutorial-icon {
+.tutorial__step-icon {
   margin-left: 15px;
   color: #7e7e7e;
 }
-.tutorial-content .tutorial-icon-purple {
-  margin-left: 15px;
+.tutorial__step-icon--purple {
   color: #9356dc;
 }
 
