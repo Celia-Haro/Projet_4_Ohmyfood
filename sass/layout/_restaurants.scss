@@ -8,6 +8,9 @@
   gap: variables.$spacing-xl;
   background-color: variables.$background-main;
   width: 100%;
+  &__title {
+    max-width: 1080px;
+  }
 }
 
 .restaurant-cards {
@@ -22,7 +25,7 @@
     gap: variables.$spacing-l;
   }
   @include mixins.large-screen {
-    gap: variables.$spacing-xl;
+    gap: variables.$spacing-section;
     margin: auto;
   }
 }

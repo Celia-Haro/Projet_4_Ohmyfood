@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 %button-primary {
   color: variables.$light-text-color;
@@ -20,12 +21,13 @@
 }
 
 %btn-tuto {
-  display: flex;
-  align-items: center;
+  @include mixins.flexbox(row, flex-start, center);
+  // display: flex;
+  // align-items: center;
   width: 100%;
   position: relative;
   margin-left: variables.$spacing-m;
-  padding: variables.$spacing-l variables.$spacing-l;
+  padding: variables.$spacing-xl variables.$spacing-m;
   background-color: variables.$background-main;
   border: variables.$background-main;
   border-radius: variables.$border-radius-medium;
@@ -35,11 +37,8 @@
 }
 
 %tutorial-number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flexbox(row, center, center);
   position: absolute;
-  // left: 1px;
   z-index: 1;
   width: 24px;
   height: 24px;

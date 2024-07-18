@@ -41,9 +41,14 @@
   @include mixins.flexbox(column);
   padding: variables.$spacing-section variables.$spacing-l 65px;
   gap: variables.$spacing-xxl;
+  &__title {
+    max-width: 1080px;
+    justify-content: flex-start;
+  }
   &__steps {
     @include mixins.flexbox(column, center);
     max-width: 1080px;
+    justify-content: flex-start;
     width: 100%;
     gap: variables.$spacing-l;
     @include mixins.medium-screen {
@@ -52,6 +57,8 @@
     }
     @include mixins.large-screen {
       margin: auto;
+      justify-content: flex-start;
+      box-sizing: border-box;
     }
   }
   &__step {
@@ -87,13 +94,13 @@
 
 .menu-container {
   position: relative;
-  top: -5px;
   padding: variables.$spacing-m;
   background: variables.$background-main;
   border-radius: 40px 40px 0 0;
   @include mixins.medium-screen {
     max-width: 1055px;
     margin: 0 auto;
+    top: 40px;
   }
 }
 
@@ -101,7 +108,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: variables.$spacing-m variables.$spacing-l variables.$spacing-xl;
+  padding: variables.$spacing-m variables.$spacing-l 40px;
   padding-left: 0%;
   @include mixins.medium-screen {
     justify-content: center;
@@ -123,7 +130,7 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: variables.$spacing-s;
+  gap: 12px;
   margin-bottom: 40px;
   @include mixins.medium-screen {
     max-width: 634px;
@@ -203,9 +210,12 @@ section:nth-of-type(3) {
   justify-content: center;
   margin-top: variables.$spacing-xxl;
   margin-bottom: variables.$spacing-m;
+  @include mixins.medium-screen {
+    margin: 40px auto;
+  }
   a {
     display: inline-block;
     @extend %button-primary;
-    padding: variables.$spacing-m variables.$spacing-xl;
+    padding: variables.$spacing-m variables.$spacing-section;
   }
 }

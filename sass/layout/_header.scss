@@ -10,6 +10,7 @@
     z-index: 2;
     position: relative;
     @include mixins.medium-screen {
+      height: 93px;
       box-shadow: none;
     }
   }
@@ -42,6 +43,9 @@
   position: absolute;
   width: 100%;
   margin: auto;
+  @include mixins.medium-screen {
+    height: 96px;
+  }
   a {
     font-size: variables.$font-size-xxl;
     position: absolute;
@@ -56,6 +60,9 @@
   &__picture {
     position: relative;
     top: 63px;
+    @include mixins.medium-screen {
+      top: 96px;
+    }
     img {
       width: 100%;
       height: 275px;

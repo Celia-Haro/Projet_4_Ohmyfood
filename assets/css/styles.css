@@ -244,7 +244,6 @@ h4 {
 
 .section-title {
   width: 100%;
-  max-width: 1080px;
   margin: 0 auto;
 }
 .section-title h2 {
@@ -265,6 +264,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .header__logo, .menu-header__logo {
+    height: 93px;
     box-shadow: none;
   }
 }
@@ -307,6 +307,11 @@ h4 {
   width: 100%;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .menu-header {
+    height: 96px;
+  }
+}
 .menu-header a {
   font-size: 1.5rem;
   position: absolute;
@@ -320,6 +325,11 @@ h4 {
 .menu-header__picture {
   position: relative;
   top: 63px;
+}
+@media (min-width: 768px) {
+  .menu-header__picture {
+    top: 96px;
+  }
 }
 .menu-header__picture img {
   width: 100%;
@@ -352,6 +362,8 @@ h4 {
     align-items: center;
     flex-wrap: nowrap;
     box-sizing: border-box;
+    position: relative;
+    top: 40px;
     height: 114px;
     padding-top: 30px;
     padding-right: 50px;
@@ -412,11 +424,14 @@ h4 {
 
 .tutorial__step-content {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
   position: relative;
   margin-left: 15px;
-  padding: 20px 20px;
+  padding: 25px 15px;
   background-color: #f6f6f6;
   border: #f6f6f6;
   border-radius: 20px;
@@ -427,8 +442,10 @@ h4 {
 
 .tutorial__step-number {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   z-index: 1;
   width: 24px;
@@ -448,6 +465,9 @@ h4 {
   background-color: #f6f6f6;
   width: 100%;
 }
+.restaurants__title {
+  max-width: 1080px;
+}
 
 .restaurant-cards {
   display: flex;
@@ -465,7 +485,7 @@ h4 {
 }
 @media (min-width: 1024px) {
   .restaurant-cards {
-    gap: 25px;
+    gap: 50px;
     margin: auto;
   }
 }
@@ -571,6 +591,10 @@ h4 {
   padding: 50px 20px 65px;
   gap: 30px;
 }
+.tutorial__title {
+  max-width: 1080px;
+  justify-content: flex-start;
+}
 .tutorial__steps {
   display: flex;
   flex-direction: column;
@@ -578,6 +602,7 @@ h4 {
   align-items: stretch;
   flex-wrap: nowrap;
   max-width: 1080px;
+  justify-content: flex-start;
   width: 100%;
   gap: 20px;
 }
@@ -590,6 +615,8 @@ h4 {
 @media (min-width: 1024px) {
   .tutorial__steps {
     margin: auto;
+    justify-content: flex-start;
+    box-sizing: border-box;
   }
 }
 .tutorial__step {
@@ -630,7 +657,6 @@ h4 {
 
 .menu-container {
   position: relative;
-  top: -5px;
   padding: 15px;
   background: #f6f6f6;
   border-radius: 40px 40px 0 0;
@@ -639,6 +665,7 @@ h4 {
   .menu-container {
     max-width: 1055px;
     margin: 0 auto;
+    top: 40px;
   }
 }
 
@@ -646,7 +673,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px 25px;
+  padding: 15px 20px 40px;
   padding-left: 0%;
 }
 @media (min-width: 768px) {
@@ -670,7 +697,7 @@ h4 {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 40px;
 }
 @media (min-width: 768px) {
@@ -753,7 +780,12 @@ section:nth-of-type(3) {
   margin-top: 30px;
   margin-bottom: 15px;
 }
+@media (min-width: 768px) {
+  .button-container {
+    margin: 40px auto;
+  }
+}
 .button-container a {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 50px;
 }/*# sourceMappingURL=styles.css.map */
