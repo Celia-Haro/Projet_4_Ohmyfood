@@ -362,8 +362,6 @@ h4 {
     align-items: center;
     flex-wrap: nowrap;
     box-sizing: border-box;
-    position: relative;
-    top: 40px;
     height: 114px;
     padding-top: 30px;
     padding-right: 50px;
@@ -405,6 +403,13 @@ h4 {
   font-size: 12px;
   height: 13px;
   width: 11px;
+}
+
+@media (min-width: 768px) {
+  .menu-footer {
+    position: relative;
+    top: 40px;
+  }
 }
 
 .introduction .button-primary, .button-container a {
