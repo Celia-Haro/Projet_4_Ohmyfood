@@ -3,8 +3,7 @@
 @use "../components/buttons-cards";
 
 .restaurants {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flexbox(column);
   padding: 60px variables.$spacing-l;
   gap: variables.$spacing-xl;
   background-color: variables.$background-main;
@@ -13,9 +12,7 @@
     max-width: 1080px;
   }
   &__cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flexbox(column, flex-start, center);
     gap: variables.$spacing-m;
     max-width: 1080px;
     @include mixins.medium-screen {
@@ -38,8 +35,7 @@
     width: 47%;
   }
   &__article {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flexbox(column);
     overflow: hidden;
     height: 251px;
     border-radius: variables.$border-radius-small;
@@ -70,15 +66,11 @@
       }
     }
     &-content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+      @include mixins.flexbox(row, space-between, center);
       padding: 0 variables.$spacing-l 0 variables.$spacing-m;
       height: 30%;
       &-text {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flexbox(column);
         gap: variables.$spacing-xs;
         p {
           font-size: variables.$font-size-l;

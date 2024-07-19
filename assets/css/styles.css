@@ -452,6 +452,9 @@ h4 {
 .restaurants {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   padding: 60px 20px;
   gap: 25px;
   background-color: #f6f6f6;
@@ -463,7 +466,9 @@ h4 {
 .restaurants__cards {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 15px;
   max-width: 1080px;
 }
@@ -494,6 +499,9 @@ h4 {
 .card__article {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   overflow: hidden;
   height: 251px;
   border-radius: 15px;
@@ -527,14 +535,18 @@ h4 {
 .card__article-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   padding: 0 20px 0 15px;
   height: 30%;
 }
 .card__article-content-text {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   gap: 5px;
 }
 .card__article-content-text p {
