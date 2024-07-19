@@ -95,10 +95,6 @@ input {
   display: none;
 }
 
-.menu__animation--1 {
-  animation: slideIn 1s forwards;
-}
-
 .menu-1 {
   animation: slideIn 1s forwards;
 }
@@ -121,49 +117,38 @@ input {
     opacity: 1;
   }
 }
-.menu-card .anim-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  bottom: -15px;
-  right: -15px;
+.menu__card-right-side--anim-check {
   transform-origin: right;
-  width: 0;
-  height: 69px;
-  border-radius: 0 15px 15px 0;
-  color: #99e2d0;
-  background-color: #99e2d0;
   transition: all 150ms ease-in-out;
 }
-.menu-card .anim-check img {
+.menu__card-right-side--anim-check img {
   width: 0;
   transition: all 200ms 100ms ease-out;
 }
 
-.menu-card:hover .anim-check {
+.menu__card:hover .menu__card-right-side--anim-check {
   width: 20px;
   transition: all 200ms ease-in;
 }
-.menu-card:hover .anim-check img {
+.menu__card:hover .menu__card-right-side--anim-check img {
   width: 0;
   transition: all 200ms ease-in;
 }
 
-input:checked + label .menu-card .anim-check {
+input:checked + label .menu__card-right-side--anim-check {
   width: 59px;
   transition: width 300ms ease-in;
 }
-input:checked + label .menu-card .anim-check img {
+input:checked + label .menu__card-right-side--anim-check img {
   width: auto;
   transition: width 200ms 100ms ease-out;
 }
 
-input:checked + label:hover .menu-card .anim-check {
+input:checked + label:hover .menu__card-right-side--anim-check {
   width: 59px;
   transition: all 400ms ease-in;
 }
-input:checked + label:hover .menu-card .anim-check img {
+input:checked + label:hover .menu__card-right-side--anim-check img {
   width: auto;
 }
 
@@ -739,7 +724,7 @@ h4 {
   background-color: #99e2d0;
 }
 
-.menu-card {
+.menu__card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -749,7 +734,7 @@ h4 {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
 }
-.menu-card .menu-name {
+.menu__card-name {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -759,30 +744,41 @@ h4 {
   white-space: nowrap;
   padding-right: 5px;
 }
-.menu-card h3,
-.menu-card .menu-title {
+.menu__card-name--title {
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.125rem;
 }
-.menu-card p,
-.menu-card .menu-subtitle {
+.menu__card-name--subtitle {
   font-size: 0.938rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-card .right-side {
+.menu__card-right-side {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-end;
 }
-.menu-card .menu-price {
+.menu__card-right-side--price {
   display: flex;
   justify-content: flex-end;
   font-size: 0.938rem;
   font-weight: 500;
   color: #353535;
+}
+.menu__card-right-side--anim-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: -15px;
+  right: -15px;
+  width: 0;
+  height: 69px;
+  border-radius: 0 15px 15px 0;
+  color: #99e2d0;
+  background-color: #99e2d0;
 }
 
 section:nth-of-type(3) {

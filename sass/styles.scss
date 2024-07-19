@@ -165,7 +165,7 @@
   }
 }
 
-.menu-card {
+.menu__card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -174,7 +174,7 @@
   border-radius: variables.$border-radius-small;
   box-shadow: variables.$box-shadow-5;
   cursor: pointer;
-  .menu-name {
+  &-name {
     display: flex;
     flex-direction: column;
     gap: variables.$spacing-xs;
@@ -183,31 +183,43 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     padding-right: variables.$spacing-xs;
+    &--title {
+      font-weight: variables.$font-weight-m;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: variables.$font-size-xl;
+    }
+    &--subtitle {
+      font-size: variables.$font-size-s;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
-  h3,
-  .menu-title {
-    font-weight: variables.$font-weight-m;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: variables.$font-size-xl;
-  }
-  p,
-  .menu-subtitle {
-    font-size: variables.$font-size-s;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .right-side {
+  &-right-side {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
-  }
-  .menu-price {
-    display: flex;
-    justify-content: flex-end;
-    font-size: variables.$font-size-s;
-    font-weight: variables.$font-weight-m;
-    color: variables.$secondary-text-color;
+    &--price {
+      display: flex;
+      justify-content: flex-end;
+      font-size: variables.$font-size-s;
+      font-weight: variables.$font-weight-m;
+      color: variables.$secondary-text-color;
+    }
+    //le code de l'animation se situe dans le fichier _animations.scss
+    &--anim-check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: -15px;
+      right: -15px;
+      width: 0;
+      height: 69px;
+      border-radius: 0 15px 15px 0;
+      color: variables.$tertiary-color;
+      background-color: variables.$tertiary-color;
+    }
   }
 }
 
