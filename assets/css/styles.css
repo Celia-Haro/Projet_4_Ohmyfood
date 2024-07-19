@@ -659,8 +659,10 @@ h4 {
 
 .main-title {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   padding: 15px 20px 40px;
   padding-left: 0%;
 }
@@ -678,8 +680,10 @@ h4 {
 }
 .main-title .menu-favorite {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 .main-title .menu-favorite label .heart,
 .main-title .menu-favorite label .heart-activated {
@@ -697,6 +701,9 @@ h4 {
 .menu {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   gap: 12px;
   margin-bottom: 40px;
 }
@@ -726,8 +733,10 @@ h4 {
 
 .menu__card {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: nowrap;
   max-height: 69px;
   padding: 15px 15px;
   border-radius: 15px;
@@ -757,20 +766,27 @@ h4 {
 }
 .menu__card-right-side {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-end;
+  flex-wrap: nowrap;
 }
 .menu__card-right-side--price {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
+  align-items: stretch;
+  flex-wrap: nowrap;
   font-size: 0.938rem;
   font-weight: 500;
   color: #353535;
 }
 .menu__card-right-side--anim-check {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: relative;
   bottom: -15px;
   right: -15px;
@@ -787,7 +803,10 @@ section:nth-of-type(3) {
 
 .button-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
   margin-top: 30px;
   margin-bottom: 15px;
 }

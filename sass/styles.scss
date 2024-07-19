@@ -105,9 +105,7 @@
 }
 
 .main-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flexbox(row, space-between, center);
   padding: variables.$spacing-m variables.$spacing-l 40px;
   padding-left: 0%;
   @include mixins.medium-screen {
@@ -122,9 +120,7 @@
   }
   .menu-favorite {
     @extend %favorite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flexbox(row, center, center);
     label .heart,
     label .heart-activated {
       position: absolute;
@@ -138,8 +134,7 @@
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flexbox(column);
   gap: 12px;
   margin-bottom: 40px;
   @include mixins.medium-screen {
@@ -166,9 +161,7 @@
 }
 
 .menu__card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include mixins.flexbox(row, space-between, flex-end);
   max-height: 69px;
   padding: variables.$spacing-m variables.$spacing-m;
   border-radius: variables.$border-radius-small;
@@ -196,21 +189,16 @@
     }
   }
   &-right-side {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
+    @include mixins.flexbox(row, flex-start, flex-end);
     &--price {
-      display: flex;
-      justify-content: flex-end;
+      @include mixins.flexbox(row, flex-end);
       font-size: variables.$font-size-s;
       font-weight: variables.$font-weight-m;
       color: variables.$secondary-text-color;
     }
     //le code de l'animation se situe dans le fichier _animations.scss
     &--anim-check {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include mixins.flexbox(row, center, center);
       position: relative;
       bottom: -15px;
       right: -15px;
@@ -228,8 +216,7 @@ section:nth-of-type(3) {
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
+  @include mixins.flexbox(row, center);
   margin-top: variables.$spacing-xxl;
   margin-bottom: variables.$spacing-m;
   @include mixins.medium-screen {
