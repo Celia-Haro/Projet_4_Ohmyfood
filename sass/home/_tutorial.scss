@@ -1,0 +1,52 @@
+.tutorial {
+  @include mixins.flexbox(column);
+  padding: variables.$spacing-section variables.$spacing-l 65px;
+  gap: variables.$spacing-xxl;
+  &__title {
+    max-width: 1080px;
+    justify-content: flex-start;
+  }
+  &__steps {
+    @include mixins.flexbox(column, center);
+    max-width: 1080px;
+    justify-content: flex-start;
+    width: 100%;
+    gap: variables.$spacing-l;
+    @include mixins.medium-screen {
+      flex-flow: row nowrap;
+      width: 100%;
+    }
+    @include mixins.large-screen {
+      margin: auto;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+  }
+  &__step {
+    @include mixins.flexbox(row, flex-start, center);
+    position: relative;
+    min-width: 335px;
+    @include mixins.medium-screen {
+      width: 30%;
+      min-width: 235px;
+      max-width: 335px;
+    }
+    @include mixins.large-screen {
+      width: 335px;
+    }
+    &-number {
+      @extend %tutorial-number;
+    }
+    &-content {
+      @extend %btn-tuto;
+      @include mixins.flexbox(row, flex-start, center);
+    }
+    &-icon {
+      margin-left: variables.$spacing-m;
+      color: variables.$icon-color;
+      &--purple {
+        color: variables.$primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.introduction {
+  text-align: center;
+  padding: 40px variables.$spacing-l 70px;
+  background-color: variables.$background-main;
+  h2 {
+    padding: 0 variables.$spacing-l;
+    margin-bottom: variables.$spacing-l;
+    @include mixins.medium-screen {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: variables.$secondary-text-color;
+    margin-bottom: 40px;
+  }
+  .button-primary {
+    @extend %button-primary;
+  }
+  a {
+    margin-top: variables.$spacing-l;
+    margin-bottom: 55px;
+  }
+}
