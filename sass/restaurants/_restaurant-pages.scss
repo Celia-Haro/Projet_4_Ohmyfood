@@ -1,4 +1,6 @@
-@use "abstract/variables";
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../components/buttons-cards";
 
 .menu-container {
   position: relative;

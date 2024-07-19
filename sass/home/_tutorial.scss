@@ -1,3 +1,7 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../components/buttons-cards";
+
 .tutorial {
   @include mixins.flexbox(column);
   padding: variables.$spacing-section variables.$spacing-l 65px;
