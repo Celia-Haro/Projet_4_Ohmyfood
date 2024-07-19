@@ -135,13 +135,15 @@ input {
   }
 }
 
-.menu__card:hover {
-  .menu__card-right-side--anim-check {
-    width: 20px;
-    transition: all 200ms ease-in;
-    img {
-      width: 0;
+.menu {
+  &__card:hover {
+    .menu__card-right-side--anim-check {
+      width: 20px;
       transition: all 200ms ease-in;
+      img {
+        width: 0;
+        transition: all 200ms ease-in;
+      }
     }
   }
 }
