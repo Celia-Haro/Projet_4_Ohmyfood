@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
+@use "../components/buttons-cards";
 
 .restaurants {
   display: flex;
@@ -11,88 +12,89 @@
   &__title {
     max-width: 1080px;
   }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$spacing-m;
+    max-width: 1080px;
+    @include mixins.medium-screen {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: variables.$spacing-l;
+    }
+    @include mixins.large-screen {
+      gap: variables.$spacing-section;
+      margin: auto;
+    }
+  }
 }
 
-.restaurant-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: variables.$spacing-m;
-  max-width: 1080px;
-  @include mixins.medium-screen {
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: variables.$spacing-l;
-  }
-  @include mixins.large-screen {
-    gap: variables.$spacing-section;
-    margin: auto;
-  }
-}
-
-.card-container {
+.card {
   position: relative;
   max-width: 490px;
   width: 100%;
   @include mixins.medium-screen {
     width: 47%;
   }
-}
-
-.restaurant-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 251px;
-  border-radius: variables.$border-radius-small;
-  box-shadow: variables.$box-shadow-5;
-  background-color: variables.$background-light;
-}
-
-.card-header {
-  position: relative;
-  overflow: hidden;
-  height: 70%;
-  img {
-    height: 175px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .card-status {
-    position: absolute;
-    z-index: 1;
-    top: 15px;
-    right: 15px;
-    padding: 7px 12px;
-    color: variables.$green-text-color;
-    background-color: variables.$tertiary-color;
-    border: none;
-    border-radius: 2px;
-    box-shadow: variables.$box-shadow-1;
-    font-size: variables.$font-size-xs;
-    font-weight: variables.$font-weight-m;
-  }
-}
-
-.card-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 variables.$spacing-l 0 variables.$spacing-m;
-  height: 30%;
-  .card-info {
+  &__article {
     display: flex;
     flex-direction: column;
-    gap: variables.$spacing-xs;
-    p {
-      font-size: variables.$font-size-l;
+    overflow: hidden;
+    height: 251px;
+    border-radius: variables.$border-radius-small;
+    box-shadow: variables.$box-shadow-5;
+    background-color: variables.$background-light;
+    &-header {
+      position: relative;
+      overflow: hidden;
+      height: 70%;
+      img {
+        height: 175px;
+        width: 100%;
+        object-fit: cover;
+      }
+      &--status {
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        right: 15px;
+        padding: 7px 12px;
+        color: variables.$green-text-color;
+        background-color: variables.$tertiary-color;
+        border: none;
+        border-radius: 2px;
+        box-shadow: variables.$box-shadow-1;
+        font-size: variables.$font-size-xs;
+        font-weight: variables.$font-weight-m;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 variables.$spacing-l 0 variables.$spacing-m;
+      height: 30%;
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$spacing-xs;
+        p {
+          font-size: variables.$font-size-l;
+        }
+      }
     }
   }
-}
 
-.card-container .card-favorite {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
+  &-favorite {
+    @extend %favorite;
+    position: relative;
+    .heart,
+    .heart-activated {
+      position: absolute;
+      bottom: 30px;
+      right: 25px;
+    }
+  }
 }

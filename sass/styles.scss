@@ -120,10 +120,16 @@
     font-weight: variables.$font-weight-logo;
     color: #101010;
   }
-  .card-favorite {
+  .menu-favorite {
+    @extend %favorite;
     display: flex;
     justify-content: center;
     align-items: center;
+    label .heart,
+    label .heart-activated {
+      position: absolute;
+      top: -10px;
+    }
   }
 }
 

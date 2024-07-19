@@ -94,55 +94,9 @@
   }
 }
 
-// animation heart
-
-.card-favorite input[type="checkbox"] {
-  display: none;
-}
-
-.card-favorite label {
-  cursor: pointer;
-}
-
-.heart,
-.heart-activated {
-  width: 22px;
-  height: 21px;
-}
-
-.heart-activated {
-  display: none;
-}
-
-.card-favorite input[type="checkbox"]:checked + label .heart {
-  display: none;
-}
-
-.card-favorite input[type="checkbox"]:checked + label .heart-activated {
-  display: inline-block;
-}
-
+// A ajouter dans le code de l'animation des cartes menu !!!!
 input {
   display: none;
-}
-
-label {
-  .heart-activated {
-    cursor: pointer;
-    opacity: 0;
-    transition: all 800ms ease-out;
-  }
-}
-
-input:checked ~ label {
-  .heart {
-    cursor: pointer;
-    opacity: 0;
-  }
-  .heart-activated {
-    cursor: pointer;
-    opacity: 1;
-  }
 }
 
 // Animation sections menu delay

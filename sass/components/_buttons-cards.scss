@@ -22,8 +22,6 @@
 
 %btn-tuto {
   @include mixins.flexbox(row, flex-start, center);
-  // display: flex;
-  // align-items: center;
   width: 100%;
   position: relative;
   margin-left: variables.$spacing-m;
@@ -47,4 +45,33 @@
   border-radius: 100%;
   font-size: variables.$font-size-xs;
   font-weight: variables.$font-weight-m;
+}
+
+%favorite {
+  position: relative;
+  input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    .heart,
+    .heart-activated {
+      width: 22px;
+      height: 21px;
+      transition: opacity 300ms;
+    }
+    .heart-activated {
+      opacity: 0;
+    }
+  }
+  input:checked + label {
+    .heart {
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+    .heart-activated {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+  }
 }
