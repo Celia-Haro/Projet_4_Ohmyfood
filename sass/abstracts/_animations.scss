@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes dot-spin {
+@keyframes dotSpin {
   0% {
     transform: scale(0.5);
   }
@@ -49,7 +49,7 @@
       height: 15px;
       background-color: variables.$secondary-color;
       border-radius: 50%;
-      animation: dot-spin 1.5s ease-in infinite;
+      animation: dotSpin 1.5s ease-in infinite;
       &:nth-child(1) {
         top: 0;
         left: 50%;
@@ -128,7 +128,7 @@ input {
 
 .menu__card-right-side--anim-check {
   transform-origin: right;
-  transition: all 150ms ease-in-out;
+  transition: all 300ms ease-in-out;
   img {
     width: 0;
     transition: all 200ms 100ms ease-out;
@@ -136,13 +136,15 @@ input {
 }
 
 .menu {
-  &__card:hover {
-    .menu__card-right-side--anim-check {
-      width: 20px;
-      transition: all 200ms ease-in;
-      img {
-        width: 0;
-        transition: all 200ms ease-in;
+  @include mixins.medium-screen {
+    &__card:hover {
+      .menu__card-right-side--anim-check {
+        width: 20px;
+        transition: all 150ms ease-in;
+        img {
+          width: 0;
+          transition: all 300ms ease-in;
+        }
       }
     }
   }
@@ -164,3 +166,43 @@ input:checked + label:hover .menu__card-right-side--anim-check {
     width: auto;
   }
 }
+
+// .menu__card-right-side--anim-check {
+//   transform-origin: right;
+//   transition: transform 150ms ease-in-out, opacity 150ms ease-in-out;
+//   opacity: 0; // Cache initialement l'image
+//   img {
+//     transform: scaleX(0);
+//     transition: transform 200ms 100ms ease-out;
+//   }
+// }
+
+// .menu {
+//   @include mixins.medium-screen {
+//     &__card:hover {
+//       .menu__card-right-side--anim-check {
+//         transform: translateX(-20px); // Déplace l'élément vers la gauche
+//         opacity: 1; // Rend l'élément visible
+//         transition: transform 200ms ease-in, opacity 200ms ease-in;
+//         img {
+//           transform: scaleX(0);
+//           transition: transform 200ms ease-in;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// input:checked + label .menu__card-right-side--anim-check {
+//   transform: translateX(0); // Remet l'élément à sa position d'origine
+//   opacity: 1; // Assure que l'élément est visible
+//   transition: transform 300ms ease-in, opacity 300ms ease-in;
+//   img {
+//     transform: scaleX(1); // Redimensionne l'image pour qu'elle apparaisse
+//     transition: transform 200ms 100ms ease-out;
+//   }
+// }
+
+// input:checked + label:hover .menu__card-right-side--anim-check {
+//   transform: translateX(0); // Maintient l'élément à sa position d
+// }
