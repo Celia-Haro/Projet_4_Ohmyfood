@@ -9,10 +9,10 @@
 @use "./layout/footer";
 
 // Import styles homepage
-@use "home/introduction";
-@use "home/tutorial";
-@use "home/restaurants";
+@use "./home/introduction";
+@use "./home/tutorial";
+@use "./home/restaurants";
 
 // Import styles pages restaurants
 
-@use "restaurants/restaurant-pages";
+@use "./restaurants/restaurant-pages";

@@ -136,7 +136,7 @@ input {
 }
 
 .menu {
-  @include mixins.medium-screen {
+  @include mixins.large-screen {
     &__card:hover {
       .menu__card-right-side--anim-check {
         width: 20px;
@@ -160,9 +160,11 @@ input:checked + label .menu__card-right-side--anim-check {
 }
 
 input:checked + label:hover .menu__card-right-side--anim-check {
-  width: 59px;
-  transition: all 400ms ease-in;
-  img {
-    width: auto;
+  @include mixins.large-screen {
+    width: 59px;
+    transition: all 400ms ease-in;
+    img {
+      width: auto;
+    }
   }
 }

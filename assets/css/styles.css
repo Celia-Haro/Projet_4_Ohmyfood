@@ -126,7 +126,7 @@ input {
   transition: all 200ms 100ms ease-out;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__card:hover .menu__card-right-side--anim-check {
     width: 20px;
     transition: all 150ms ease-in;
@@ -146,12 +146,14 @@ input:checked + label .menu__card-right-side--anim-check img {
   transition: width 200ms 100ms ease-out;
 }
 
-input:checked + label:hover .menu__card-right-side--anim-check {
-  width: 59px;
-  transition: all 400ms ease-in;
-}
-input:checked + label:hover .menu__card-right-side--anim-check img {
-  width: auto;
+@media (min-width: 1024px) {
+  input:checked + label:hover .menu__card-right-side--anim-check {
+    width: 59px;
+    transition: all 400ms ease-in;
+  }
+  input:checked + label:hover .menu__card-right-side--anim-check img {
+    width: auto;
+  }
 }
 
 * {
