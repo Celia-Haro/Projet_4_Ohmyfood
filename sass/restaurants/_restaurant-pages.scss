@@ -78,10 +78,8 @@
   box-shadow: variables.$box-shadow-5;
   cursor: pointer;
   &-name {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flexbox(column, center);
     gap: variables.$spacing-xs;
-    justify-content: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -748,8 +748,10 @@ h4 {
 .menu__card-name {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
