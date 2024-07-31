@@ -13,7 +13,7 @@
   flex-wrap: $wrap;
 }
 
-// Definition des media queries ( à modifier si besoin ...)
+// Definition des media queries
 
 @mixin medium-screen {
   @media (min-width: 768px) {

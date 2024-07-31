@@ -1,6 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
-@use "../components/buttons-cards";
+@use "../components/placeholders";
 
 .tutorial {
   @include mixins.flexbox(column);

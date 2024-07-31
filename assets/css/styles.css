@@ -91,10 +91,6 @@
   animation-delay: 1.05s;
 }
 
-input {
-  display: none;
-}
-
 .menu-1 {
   animation: slideIn 1s forwards;
 }
@@ -117,6 +113,10 @@ input {
     opacity: 1;
   }
 }
+input {
+  display: none;
+}
+
 .menu__card-right-side--anim-check {
   transform-origin: right;
   transition: all 300ms ease-in-out;

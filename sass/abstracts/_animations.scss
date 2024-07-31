@@ -94,11 +94,6 @@
   }
 }
 
-// A ajouter dans le code de l'animation des cartes menu !!!!
-input {
-  display: none;
-}
-
 // Animation sections menu delay
 
 .menu-1 {
@@ -125,6 +120,10 @@ input {
 }
 
 // Animation menu__card checkbox
+
+input {
+  display: none;
+}
 
 .menu__card-right-side--anim-check {
   transform-origin: right;
